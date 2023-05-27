@@ -28,11 +28,6 @@ public class ToDoController {
 		this.doService = doService;
 	} 
 
-	@RequestMapping("/")
-	public String goTOWellcome(ModelMap model) {
-		model.put("name", "mengistu");
-		return "wellcame";
-	}
 	@RequestMapping("/todolist")
 	public String listuser(ModelMap model) {
 		List<ToDo> todo = doService.findByUsername("men");
